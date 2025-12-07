@@ -1,0 +1,105 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  position: relative;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-neutral-1) 0%, var(--color-neutral-2) 100%);
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+.heroTitle {
+  position: relative;
+  z-index: 1;
+  font: 900 clamp(2.5rem, 6vw, 4rem) var(--font-neo-grotesque);
+  color: var(--color-neutral-12);
+  margin: 0;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-9) var(--space-6);
+}
+
+.section {
+  margin-bottom: var(--space-8);
+}
+
+.sectionTitle {
+  font: 700 clamp(1.5rem, 3vw, 2rem) var(--font-neo-grotesque);
+  color: var(--color-neutral-12);
+  margin: 0 0 var(--space-4) 0;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.text {
+  font: 400 1.125rem var(--font-neo-grotesque);
+  color: var(--color-neutral-11);
+  line-height: 1.8;
+  margin: 0 0 var(--space-4) 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.feature {
+  padding: var(--space-6);
+  background: var(--color-neutral-2);
+  border: 1px solid var(--color-neutral-6);
+  border-radius: var(--radius-6);
+}
+
+.featureIcon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--space-4);
+  color: var(--color-accent-9);
+}
+
+.featureTitle {
+  font: 700 1.125rem var(--font-neo-grotesque);
+  color: var(--color-neutral-12);
+  margin: 0 0 var(--space-3) 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.featureText {
+  font: 400 1rem var(--font-neo-grotesque);
+  color: var(--color-neutral-10);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: var(--space-7) var(--space-4);
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}

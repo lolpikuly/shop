@@ -1,0 +1,268 @@
+export interface Product {
+  id: string;
+  title: string;
+  brand: string;
+  size: string;
+  condition: number;
+  price: number;
+  description: string;
+  imageUrl: string;
+  images?: string[]; // Multiple product photos
+  category: string;
+  inStock: boolean;
+  isNew?: boolean;
+}
+
+// Enhanced products with multiple high-quality editorial images
+export const products: Product[] = [
+  {
+    id: "1",
+    title: "Cargo Pants",
+    brand: "Stone Island",
+    size: "L",
+    condition: 9,
+    price: 45000,
+    description: "Pre-owned. Классические карго брюки Stone Island в отличном состоянии. Культовая модель с фирменной нашивкой. Бережное использование.",
+    imageUrl: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=1200&q=90",
+    images: [
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=1200&q=90",
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=1200&q=90",
+      "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=1200&q=90",
+      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=1200&q=90",
+      "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=1200&q=90",
+    ],
+    category: "Брюки",
+    inStock: true,
+    isNew: false,
+  },
+  {
+    id: "2",
+    title: "Monogram Hoodie",
+    brand: "Louis Vuitton",
+    size: "M",
+    condition: 10,
+    price: 125000,
+    description: "New. Эксклюзивное худи Louis Vuitton с монограммой. Новое состояние, оригинальные бирки.",
+    imageUrl: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=1200&q=90",
+    images: [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=1200&q=90",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=1200&q=90",
+      "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=1200&q=90",
+      "https://images.unsplash.com/photo-1620799139834-6b8f844fbe61?w=1200&q=90",
+      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200&q=90",
+    ],
+    category: "Худи",
+    inStock: true,
+    isNew: true,
+  },
+  {
+    id: "3",
+    title: "Leather Jacket",
+    brand: "Saint Laurent",
+    size: "M",
+    condition: 8,
+    price: 185000,
+    description: "Pre-owned. Культовая кожаная куртка Saint Laurent. Премиальная кожа ягненка, классический силуэт. Естественная патина добавляет характер.",
+    imageUrl: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1200&q=90",
+    images: [
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1200&q=90",
+      "https://images.unsplash.com/photo-1520975954732-35dd22299614?w=1200&q=90",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=1200&q=90",
+      "https://images.unsplash.com/photo-1548603086-4c35e91c8e88?w=1200&q=90",
+      "https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=1200&q=90",
+    ],
+    category: "Куртки",
+    inStock: true,
+    isNew: false,
+  },
+  {
+    id: "4",
+    title: "Trench Coat",
+    brand: "Burberry",
+    size: "L",
+    condition: 9,
+    price: 95000,
+    description: "Pre-owned. Классический тренч Burberry с фирменной подкладкой в клетку. Вневременной стиль, отличное состояние.",
+    imageUrl: "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=1200&q=90",
+    images: [
+      "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=1200&q=90",
+      "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=1200&q=90",
+      "https://images.unsplash.com/photo-1580657018950-c7f7d6a6d990?w=1200&q=90",
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=1200&q=90",
+      "https://images.unsplash.com/photo-1525450502498-0d6ac015c509?w=1200&q=90",
+    ],
+    category: "Пальто",
+    inStock: true,
+    isNew: false,
+  },
+  {
+    id: "5",
+    title: "Goggle Jacket",
+    brand: "CP Company",
+    size: "XL",
+    condition: 9,
+    price: 55000,
+    description: "Pre-owned. Легендарная куртка CP Company с фирменными очками. Иконический дизайн бренда, бережно ношено.",
+    imageUrl: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=1200&q=90",
+    images: [
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=1200&q=90",
+      "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=1200&q=90",
+      "https://images.unsplash.com/photo-1548883354-a9dc0e0ca0b1?w=1200&q=90",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1200&q=90",
+      "https://images.unsplash.com/photo-1544923408-75c5cef46f14?w=1200&q=90",
+    ],
+    category: "Куртки",
+    inStock: true,
+    isNew: false,
+  },
+  {
+    id: "6",
+    title: "Beta AR Jacket",
+    brand: "Arc'teryx",
+    size: "M",
+    condition: 10,
+    price: 68000,
+    description: "New. Технологичная куртка Arc'teryx Beta AR. Gore-Tex Pro, идеальное состояние, не ношено.",
+    imageUrl: "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=1200&q=90",
+    images: [
+      "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=1200&q=90",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1200&q=90",
+      "https://images.unsplash.com/photo-1604176354204-9268737828e4?w=1200&q=90",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=1200&q=90",
+      "https://images.unsplash.com/photo-1548883354-a9dc0e0ca0b1?w=1200&q=90",
+    ],
+    category: "Куртки",
+    inStock: true,
+    isNew: true,
+  },
+  {
+    id: "7",
+    title: "Oversized Sweater",
+    brand: "Acne Studios",
+    size: "M",
+    condition: 9,
+    price: 32000,
+    description: "Pre-owned. Минималистичный оверсайз свитер Acne Studios. Премиальная шерсть, скандинавский дизайн. Практически новое.",
+    imageUrl: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=1200&q=90",
+    images: [
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=1200&q=90",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=1200&q=90",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=1200&q=90",
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=1200&q=90",
+      "https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?w=1200&q=90",
+    ],
+    category: "Свитера",
+    inStock: true,
+    isNew: false,
+  },
+  {
+    id: "8",
+    title: "Industrial Belt",
+    brand: "A Cold Wall",
+    size: "OS",
+    condition: 10,
+    price: 18000,
+    description: "New. Культовый индустриальный пояс A Cold Wall. Новое состояние, оригинальная упаковка.",
+    imageUrl: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=1200&q=90",
+    images: [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=1200&q=90",
+      "https://images.unsplash.com/photo-1582552938357-32b906df40cb?w=1200&q=90",
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=1200&q=90",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=1200&q=90",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=1200&q=90",
+    ],
+    category: "Аксессуары",
+    inStock: true,
+    isNew: true,
+  },
+  {
+    id: "9",
+    title: "Tabi Boots",
+    brand: "Maison Margiela",
+    size: "43",
+    condition: 8,
+    price: 78000,
+    description: "Pre-owned. Легендарные ботинки Tabi от Maison Margiela. Авангардный дизайн, премиальная кожа. Носимые признаки использования.",
+    imageUrl: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=1200&q=90",
+    images: [
+      "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=1200&q=90",
+      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=1200&q=90",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=1200&q=90",
+      "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=1200&q=90",
+      "https://images.unsplash.com/photo-1520975954732-35dd22299614?w=1200&q=90",
+    ],
+    category: "Обувь",
+    inStock: true,
+    isNew: false,
+  },
+  {
+    id: "10",
+    title: "Geobasket Sneakers",
+    brand: "Rick Owens",
+    size: "44",
+    condition: 9,
+    price: 95000,
+    description: "Pre-owned. Культовые кроссовки Rick Owens Geobasket. Футуристичный дизайн, отличное состояние, бережное использование.",
+    imageUrl: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=90",
+    images: [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=90",
+      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=1200&q=90",
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=1200&q=90",
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=1200&q=90",
+      "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=1200&q=90",
+    ],
+    category: "Обувь",
+    inStock: true,
+    isNew: false,
+  },
+  {
+    id: "11",
+    title: "Triple S Sneakers",
+    brand: "Balenciaga",
+    size: "42",
+    condition: 8,
+    price: 72000,
+    description: "Pre-owned. Иконические кроссовки Balenciaga Triple S. Массивный силуэт, премиальные материалы. Естественный износ.",
+    imageUrl: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200&q=90",
+    images: [
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200&q=90",
+      "https://images.unsplash.com/photo-1603808033176-eebc24e73d8a?w=1200&q=90",
+      "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=1200&q=90",
+      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=1200&q=90",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=1200&q=90",
+    ],
+    category: "Обувь",
+    inStock: true,
+    isNew: false,
+  },
+  {
+    id: "12",
+    title: "Logo Hoodie",
+    brand: "Vetements",
+    size: "S",
+    condition: 9,
+    price: 48000,
+    description: "Pre-owned. Оверсайз худи Vetements с фирменным логотипом. Уличный стиль высокой моды. Отличное состояние.",
+    imageUrl: "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=1200&q=90",
+    images: [
+      "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=1200&q=90",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=1200&q=90",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=1200&q=90",
+      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200&q=90",
+      "https://images.unsplash.com/photo-1620799139834-6b8f844fbe61?w=1200&q=90",
+    ],
+    category: "Худи",
+    inStock: true,
+    isNew: false,
+  },
+];
+
+// API endpoint simulation for dynamic data fetching
+export async function fetchProducts(): Promise<Product[]> {
+  // In production, this would fetch from Google Sheets API or backend
+  return products;
+}
+
+export async function fetchProductById(id: string): Promise<Product | undefined> {
+  return products.find(p => p.id === id);
+}

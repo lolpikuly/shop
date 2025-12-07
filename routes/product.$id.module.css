@@ -1,0 +1,256 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: none;
+  border: none;
+  color: var(--color-neutral-11);
+  font: var(--font-body);
+  cursor: pointer;
+  padding: var(--space-2) 0;
+  margin-bottom: var(--space-6);
+  transition: color 0.2s ease;
+}
+
+.backButton:hover {
+  color: var(--color-accent-11);
+}
+
+.productLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+@media (max-width: 968px) {
+  .productLayout {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+/* Gallery */
+.gallery {
+  position: sticky;
+  top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.mainImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: var(--radius-4);
+  overflow: hidden;
+  background: var(--color-neutral-3);
+}
+
+.mainImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.newBadge {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: var(--color-accent-9);
+  color: var(--color-accent-contrast);
+  font-weight: 700;
+  padding: var(--space-2) var(--space-4);
+}
+
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-3);
+}
+
+.thumbnail {
+  aspect-ratio: 3/4;
+  border-radius: var(--radius-3);
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--color-neutral-3);
+  padding: 0;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail:hover {
+  border-color: var(--color-neutral-7);
+}
+
+.thumbnail.active {
+  border-color: var(--color-accent-9);
+}
+
+/* Product Info */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.brand {
+  font-size: var(--font-size-1);
+  font-weight: 600;
+  color: var(--color-neutral-11);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.title {
+  font: var(--font-heading);
+  color: var(--color-neutral-12);
+  margin: 0;
+}
+
+.price {
+  font-size: var(--font-size-6);
+  font-weight: 900;
+  color: var(--color-accent-11);
+  white-space: nowrap;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.label {
+  font-weight: 600;
+  color: var(--color-neutral-11);
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 500;
+  color: var(--color-neutral-12);
+}
+
+.conditionBadge {
+  font-size: var(--font-size-0);
+}
+
+.stockBadge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  background: var(--color-success-3);
+  color: var(--color-success-11);
+  border: 1px solid var(--color-success-6);
+}
+
+.description h3 {
+  font-weight: 700;
+  font-size: var(--font-size-3);
+  color: var(--color-neutral-12);
+  margin-bottom: var(--space-3);
+}
+
+.description p {
+  font: var(--font-body);
+  color: var(--color-neutral-11);
+  line-height: 1.7;
+}
+
+.buyButton {
+  width: 100%;
+  font-size: var(--font-size-3);
+  font-weight: 700;
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-accent-9);
+  color: var(--color-accent-contrast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  border-radius: var(--radius-4);
+  transition: all 0.2s ease;
+}
+
+.buyButton:hover {
+  background: var(--color-accent-10);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-3);
+}
+
+.trustSignals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.trustCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-neutral-2);
+  border: 1px solid var(--color-neutral-6);
+  border-radius: var(--radius-3);
+}
+
+.trustCard svg {
+  color: var(--color-accent-9);
+  flex-shrink: 0;
+}
+
+.trustCard strong {
+  display: block;
+  font-size: var(--font-size-1);
+  font-weight: 700;
+  color: var(--color-neutral-12);
+  margin-bottom: var(--space-1);
+}
+
+.trustCard p {
+  font-size: var(--font-size-0);
+  color: var(--color-neutral-11);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .trustSignals {
+    grid-template-columns: 1fr;
+  }
+  
+  .thumbnails {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

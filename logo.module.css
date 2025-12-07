@@ -1,0 +1,35 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  color: var(--color-neutral-12);
+  transition: opacity 0.2s var(--ease);
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.wordmark {
+  font: 900 1.5rem var(--font-neo-grotesque);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .wordmark {
+    font-size: 1.25rem;
+  }
+}
